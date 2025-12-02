@@ -41,3 +41,13 @@ def editar_tarefa(tarefas):
             print("Tarefa editada!")
         else:
             print("Índice inválido!")
+
+def remover_tarefa(tarefas):
+             listar_tarefas(tarefas)
+    if tarefas:
+        indice = int(input("Digite o número da tarefa a remover: "))
+        if 1 <= indice < len(tarefas):
+            tarefas.pop(indice)
+            print("Tarefa removida!")
+        else:
+            print("Índice inválido!")
