@@ -30,3 +30,14 @@ def adicionar_tarefa(tarefas):
             print("Tarefa marcada como concluída!")
         else:
             print("Índice inválido!")
+
+def editar_tarefa(tarefas):
+    listar_tarefas(tarefas)
+    if tarefas:
+        indice = int(input("Digite o número da tarefa a editar: "))
+        if 1 <= indice < len(tarefas):
+            nova_desc = input("Digite a nova descrição: ")
+            tarefas[indice]["descricao"] = nova_desc
+            print("Tarefa editada!")
+        else:
+            print("Índice inválido!")
