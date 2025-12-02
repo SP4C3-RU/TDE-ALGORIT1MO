@@ -16,4 +16,17 @@ def listar_tarefas(tarefas):
     for i, tarefa in enumerate(tarefas):
       status = "CONCLUÍUDA" if tarefa["status"] else "PENDENTE"
       print(f"{i}-{tarefa["descricao"]} ({status})")
-    
+
+def adicionar_tarefa(tarefas):
+    descricao = input("\nDigite a descrição da nova tarefa: ")
+    tarefas.append({"descricao": descricao, "status": False})
+    print("Tarefa adicionada com sucesso!")
+    def marcar_concluida(tarefas):
+     listar_tarefas(tarefas)
+    if tarefas:
+        indice = int(input("Digite o número da tarefa a marcar como concluída: "))
+        if 1 <= indice < len(tarefas):
+            tarefas[indice]["status"] = True
+            print("Tarefa marcada como concluída!")
+        else:
+            print("Índice inválido!")
