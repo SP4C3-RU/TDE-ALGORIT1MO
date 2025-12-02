@@ -1,5 +1,5 @@
 def mostrar_menu():
-  print("\=== SISTEMAS DE TAREFAS ===)
+  print("\n=== SISTEMAS DE TAREFAS ===)
   print("1 - Adicionar nova tarefa")
   print("2 - Listar tarefas")
   print("3 - Listar tarefas como concluída")
